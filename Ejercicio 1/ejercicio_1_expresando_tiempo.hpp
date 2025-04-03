@@ -27,13 +27,14 @@ class Horario{
         5. Poder inicializarla pasandole parametros para cada atributo.*/
         Horario(int hora = 0, int minuto = 0, int segundo = 0, string franja = "a.m.");  //Defini valores default para mis atributos.
         
-        /*A continuación, voy a declarar una serie de getters, para que se pueda leer cada atributo de forma individual. Tambien, voy a
-        declarar un metodo que permita leer todos los atributos juntos, con el formato pedido (visualizar_info) y con el formato de 24h
-        (visualizar_info_24h).*/
-        int get_horas();
-        int get_minutos();
-        int get_segundos();
-        string get_franja_horaria();
+        /*A continuación, voy a declarar una serie de getters, para que se pueda leer cada atributo de forma individual (como solo leen 
+        los atributos y no los modifican, los declaro const para indicar su comportamiento. Es decir, para aclarar que esos metodos no 
+        modifican a los atributos). Tambien, voy a declarar un metodo que permita leer todos los atributos juntos, con el formato pedido 
+        (visualizar_info) y con el formato de 24h (visualizar_info_24h).*/
+        int get_horas () const;
+        int get_minutos () const;
+        int get_segundos () const;
+        string get_franja_horaria() const;
         void visualizar_info();
         void visualizar_info_24h();
 

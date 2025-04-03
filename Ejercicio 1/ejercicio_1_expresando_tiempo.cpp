@@ -7,13 +7,13 @@ franja_horaria = {"a.m.", "p.m."}. De no ser valido el valor ingresado, se inici
 (0 para las horas, minutos y/o segundos; "a.m." para la franja horaria).*/
 Horario::Horario(int hora, int minuto, int segundo, string franja):horas(((hora <= 12) && (hora >= 1)) ? hora : 0), minutos(((minuto <= 59) && (minuto >= 0)) ? minuto : 0), segundos(((segundo <= 59) && (segundo >= 0)) ? segundo : 0), franja_horaria(((franja == "a.m.") || (franja == "p.m.")) ? franja : "a.m."){}
 
-int Horario::get_horas(){ return horas;} //Para poder leer solamente el atributo horas.
+int Horario::get_horas() const{ return horas;} //Para poder leer solamente el atributo horas.
 
-int Horario::get_minutos(){ return minutos;} //Para poder leer solamente el atributo mintuos.
+int Horario::get_minutos() const{ return minutos;} //Para poder leer solamente el atributo mintuos.
 
-int Horario::get_segundos(){ return segundos;} //Para poder leer solamente el atributo segundos.
+int Horario::get_segundos() const{ return segundos;} //Para poder leer solamente el atributo segundos.
 
-string Horario::get_franja_horaria(){ return franja_horaria;} //Para poder leer solamente el atributo franja_horaria.
+string Horario::get_franja_horaria() const{ return franja_horaria;} //Para poder leer solamente el atributo franja_horaria.
 
 void Horario::visualizar_info(){
     /* Esta es la funcion que servira para leer los atributos de forma conjunta, con el formato pedido. Para lograr esto, use la
