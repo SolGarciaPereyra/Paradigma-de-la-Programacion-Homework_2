@@ -43,6 +43,8 @@ class Horario{
         void set_minutos(int nuevos_minutos);
         void set_segundos(int nuevos_segundos);
         void set_franja_horaria(string nueva_franja_horaria);
+
+        //No necesito destructor porque no trabajo con punteros y en ningun lado asigno memoria de forma dinamica. 
 };
 
 /* Declaro una funcion que me permite interactuar con el programa, para poder ingresar los valores de los atributos que quiero 
