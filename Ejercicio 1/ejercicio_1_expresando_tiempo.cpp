@@ -53,3 +53,42 @@ void Horario::set_minutos(int nuevos_minutos){ minutos = nuevos_minutos;} //Para
 void Horario::set_segundos(int nuevos_segundos){ segundos = nuevos_segundos;} //Para poder cambiar solamente el atributo segundos.
 
 void Horario::set_franja_horaria(string nueva_franja_horaria){ franja_horaria = nueva_franja_horaria;} //Para poder cambiar solamente el atributo franja_horaria.
+
+int obteniendo_valor_atributo(string atributo, int extremo_inferior_rango_permitido, int extremo_superior_rango_permitido){
+    //Permito que se pueda ingresar el valor del atriuto mediante el teclado:
+    int valor_ingresado;
+    cout << "Ingrese el valor de " << atributo << " deseado: ";
+    cin >> valor_ingresado;
+
+    /*Chequeo que el valor ingresado pertenezca al rango permitido. De no ser asi, se le pide al usuario que vuelva a ingresar otro
+    valor o, si desea, eligir salir del programa mediante el ingreso del numero -1 (eleccion arbitraria). En el caso de seguir ingresando
+    incorrectamente el valor, se le va a seguir pidiendo ingresar uno nuevo hasta que lo haga o hasta que eliga terminar el programa.*/
+    while((valor_ingresado < extremo_inferior_rango_permitido)|| (valor_ingresado > extremo_superior_rango_permitido)){
+        cout << "El valor ingresado no es valido, por favor ingresar otro (si desea salir del programa ingrese el numero -1): ";
+        cin >> valor_ingresado;
+        
+        if(valor_ingresado == -1){ exit(1);}  //Chequeo si el usuario eligio salir del programa.
+    }
+
+    return valor_ingresado;
+}
+
+string obteniendo_franja_horaria(){
+    //Permito que se pueda ingresar la franja horaria mediante el teclado:
+    string franja_ingresada;
+    cout << "Ingrese si desea que el horario sea a.m. o p.m.: ";
+    cin >> franja_ingresada;
+
+    /*Chequeo que la franja ingresada pertenezca a las opciones permitidas. De no ser asi, se le pide al usuario que vuelva a ingresar 
+    otra franja o, si desea, eligir salir del programa mediante el ingreso de la palabra "SALIR" (eleccion arbitraria). En el caso de 
+    seguir ingresando incorrectamente la franja, se le va a seguir pidiendo ingresar una nueva hasta que lo haga o hasta que eliga 
+    terminar el programa.*/
+    while((franja_ingresada != "a.m.") && (franja_ingresada != "p.m.")){
+        cout << "La franja ingresada no es valida, por favor ingresar otra (si desea salir del programa ingrese la palabra SALIR): ";
+        cin >> franja_ingresada;
+        
+        if(franja_ingresada == "SALIR"){ exit(1);}  //Chequeo si el usuario eligio salir del programa.
+    }
+
+    return franja_ingresada;
+}

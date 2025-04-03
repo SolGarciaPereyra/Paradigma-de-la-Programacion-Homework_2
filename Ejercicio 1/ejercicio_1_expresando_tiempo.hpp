@@ -43,3 +43,16 @@ class Horario{
         void set_segundos(int nuevos_segundos);
         void set_franja_horaria(string nueva_franja_horaria);
 };
+
+/* Declaro una funcion que me permite interactuar con el programa, para poder ingresar los valores de los atributos que quiero 
+mediante el teclado. Esta funcion sirve para obtener los valores de los atributos "horas", "minutos" y "segundos". 
+Recibe como paramtero de entrada a:
+1. atributo: es un string que tiene la intencion de indicar para que atributo se desea el valor
+2. extremo_inferior_rango_permitido: indica el numero mas chico que puede valer el atributo
+3. extremo_superior_rango_permitido: indica el numero mas grande que puede valer el atributo
+2 y 3 delimitan el rango al que puede pertenecer el valor del atributo.*/
+int obteniendo_valor_atributo(string atributo, int extremo_inferior_rango_permitido, int extremo_superior_rango_permitido);
+
+/*Su intencion es la misma que la de la funcion "obteniendo_valor_atributo", salvo que esta sirve para poder obtener la franja horaria
+deseada.*/
+string obteniendo_franja_horaria();

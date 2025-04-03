@@ -1,0 +1,4 @@
+Nos paramos sobre la carpeta "Ejercicio 1".
+Seleccionamos la opcion "New Terminal at Folder"
+Escribimos en la terminal: clang++ -g -o ejercicio_1_ main_ejercicio_1_expresando_tiempo.cpp ejercicio_1_expresando_tiempo.cpp
+Luego escribimos: ./ejercicio_1_
