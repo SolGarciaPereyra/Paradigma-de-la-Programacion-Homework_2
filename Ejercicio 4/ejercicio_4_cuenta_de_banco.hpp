@@ -19,6 +19,10 @@ las subclases solamente para poder usar ese metodo (me ahorro codigo de esta for
 Finalmente, dentro de ambas subclases declare tanto a los atributos extra y a los metodos como public, ya que me permite poder invocarlos
 desde mi main. */
 
+/*Aclaracion: no agrego destructores a mis clases porque no me hacen falta. Estoy tabajando con smart pointers, los cuales manejan su
+uso de memoria de forma independiente. Es decir, no necesito liberar la memoria manualmente, ya que ellos mismo lo hacen cuando se deja
+de usarlos.*/ 
+
 //Declaro mi clase abstracta:
 class CuentaBancaria{
     private:
