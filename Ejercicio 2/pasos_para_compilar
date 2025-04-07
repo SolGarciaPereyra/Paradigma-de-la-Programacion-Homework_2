@@ -1,0 +1,4 @@
+Nos paramos sobre la carpeta "Ejercicio 2".
+Seleccionamos la opcion "New Terminal at Folder"
+Escribimos en la terminal: clang++ -std=c++14 -g -o ejercicio_2_ main_ejercicio_2_cursos.cpp ejercicio_2_cursos.cpp
+Luego escribimos: ./ejercicio_2_
